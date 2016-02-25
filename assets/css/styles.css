@@ -1,1 +1,38 @@
-/* styles.css */
+
+
+/*.header-column {
+    width: 100%;
+}
+
+.footer-column {
+    width: 100%;
+}*/
+
+.main-content {
+  width: 100%;
+  border: 1px dashed #000;
+  /*width: 536px;  this is not reponsive - change it!*/
+  /*width: 414px;  this is not reponsive - change it!*/
+}
+
+/* clear fix -
+    prevent parent element from collapsing to zero height since it
+    has only floated children */
+.main-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* when we set a width, that element stays that width, despite padding or borders
+being applied.*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
