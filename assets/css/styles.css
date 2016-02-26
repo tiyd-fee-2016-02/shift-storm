@@ -1,5 +1,5 @@
 body {
-  height: 1000px;
+  height: 100%;
   font-family: 'Lato', sans-serif;
 }
 
@@ -15,6 +15,115 @@ h1 {
   color: rgb(43, 222, 181);
   text-align: center;
   padding-bottom: 1%;
+}
+
+.appHead {
+  padding-top: 2%;
+  color: rgb(122, 122, 122);
+  font-family: 'Lato', sans-serif;
+  font-size: 80px;
+}
+
+.appTitle {
+  font-size: 55px;
+  float: left;
+  margin-left: 3%;
+  color: rgb(205, 205, 205);
+}
+
+.appContainer1 {
+    border: 6px solid rgb(229, 229, 229);
+    position: relative;
+    text-align: center;
+    padding-top: 5%;
+    border-bottom: white;
+    border-left: white;
+    border-right: white;
+    border-radius: 1px;
+    /*margin-top: 8%;*/
+}
+
+.appContainer2 {
+    border: 6px solid rgb(229, 229, 229);
+    position: relative;
+    text-align: center;
+    padding-top: 3%;
+    border-bottom: white;
+    border-left: white;
+    border-right: white;
+    border-radius: 1px;
+    margin-top: 8%;
+}
+
+i.fa-map-marker {
+  color: rgb(185, 185, 185);
+  font-size: 65px;
+  position: absolute;
+  top: 360px;
+  right: 60px;
+  margin-left: -1em;
+}
+
+i.fa-calendar {
+  color: rgb(185, 185, 185);
+  font-size: 65px;
+  position: absolute;
+  top: 135px;
+  right: 50px;
+  margin-left: -1em;
+}
+
+i.fa-clock-o {
+  color: rgb(185, 185, 185);
+  font-size: 65px;
+  position: absolute;
+  top: 135px;
+  right: 50px;
+  margin-left: -1em;
+}
+
+
+.appContainer3 {
+    border: 6px solid rgb(229, 229, 229);
+    position: relative;
+    text-align: center;
+    padding-top: 3%;
+    border-bottom: white;
+    border-left: white;
+    border-right: white;
+    border-radius: 1px;
+    margin-top: 8%
+}
+
+.appContainer4 {
+    border: 6px solid rgb(229, 229, 229);
+    position: relative;
+    text-align: center;
+    padding-top: 3%;
+    border-bottom: white;
+    border-left: white;
+    border-right: white;
+    border-radius: 1px;
+    margin-top: 8%;
+
+}
+
+.emptyA {
+  position: relative;
+  text-align: center;
+  padding-top: 3%;
+  border-bottom: white;
+  border-left: white;
+  border-right: white;
+  border-radius: 1px;
+  margin-top: 8%;
+  height: 300px;
+
+}
+
+.fa-chevron-left {
+  float: left;
+  margin-left: 3%;
 }
 
 .fa-plus {
@@ -168,4 +277,17 @@ being applied.*/
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.footButton {
+  color: white;
+  background-color: rgb(43, 222, 181);
+  font-size: 80px;
+  text-align: center;
+  padding-top: 40px;
+  border-style: solid;
+  height: 160px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
