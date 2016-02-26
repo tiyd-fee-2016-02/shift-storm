@@ -10,10 +10,16 @@ header {
 
 h1 {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 110px;
+  font-size: 80px;
   color: rgb(43, 222, 181);
   text-align: center;
   padding-bottom: 1%;
+}
+
+.fa-plus {
+color: rgb(185, 185, 185);
+float: right;
+margin-right: 3%;
 }
 
 .main-content {
@@ -52,6 +58,7 @@ i.fa-search {
   width: 100%;
   position: relative;
   padding-top: 10%;
+  min-height: 200px;
 }
 
 .app1 {
@@ -61,6 +68,13 @@ i.fa-search {
   margin-left: 3%;
   margin-right: 3%;
   position: absolute;
+}
+
+.container2 {
+  width: 100%;
+  position: relative;
+  padding-top: 10%;
+  min-height: 200px;
 }
 
 .box {
@@ -82,7 +96,6 @@ i.fa-search {
   float: right;
   /*width: 100%;*/
   /*padding-right: 51%;*/
-
 }
 
 .right {
