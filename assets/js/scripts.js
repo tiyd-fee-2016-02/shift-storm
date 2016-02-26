@@ -14,17 +14,17 @@ $(function () {
     this.desciption = "";
     this.weatherType = "";  // cloudy, rainy, sunny
     // methods
-    this.getInfo = function() {
-        return "title = " + this.title + " \n" +
-               "create date = " + this.createDate + " \n" +
-               "appointment date = " + this.appointmentDate + "\n" +
-               "street = " + this.street + "\n" +
-               "city = " + this.city + "\n" +
-               "state = " + this.state + "\n" +
-               "temperature = " + this.temperature + "\n" +
-               "description = " + this.desciption + "\n" +
-               "weather type = " + this.weatherType + "\n";
-    };
+    // this.getInfo = function() {
+    //     return "title = " + this.title + " \n" +
+    //            "create date = " + this.createDate + " \n" +
+    //            "appointment date = " + this.appointmentDate + "\n" +
+    //            "street = " + this.street + "\n" +
+    //            "city = " + this.city + "\n" +
+    //            "state = " + this.state + "\n" +
+    //            "temperature = " + this.temperature + "\n" +
+    //            "description = " + this.desciption + "\n" +
+    //            "weather type = " + this.weatherType + "\n";
+    // };
 }
 
 var myAppt = new Appointment("app1");
@@ -35,11 +35,15 @@ myAppt.state = "VA";
 myAppt.temperature = 55;
 myAppt.desciption = "Cold as ****!";
 myAppt.weatherType = "rainy";
-console.log(myAppt.getInfo());
+console.log(myAppt);
 
+window.localStorage.setItem(myAppt.title, JSON.stringify(myAppt));
+console.log("** localStorage.setItem **");
 
-
-
+// var myOtherAppt = new Appointment();
+var myOtherAppt = JSON.parse(localStorage.getItem(myAppt.title));
+console.log("** localStorage.getItem **");
+console.log(myOtherAppt);
 
 
 // var myUser = "octocat";
