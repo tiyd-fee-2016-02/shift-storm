@@ -1,3 +1,7 @@
+body {
+  height: 1000px;
+}
+
 header {
   /*border: 1px dashed #000;*/
   padding-bottom: 1em;
@@ -5,6 +9,7 @@ header {
 }
 
 h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 110px;
   color: rgb(43, 222, 181);
   text-align: center;
@@ -22,6 +27,9 @@ h1 {
   position: relative;
   text-align: center;
   padding-top: 3%;
+  border-bottom: white;
+  border-left: white;
+  border-right: white;
 }
 
 #txt {
@@ -40,7 +48,49 @@ i.fa-search {
   margin-left: -1em;
 }
 
+.container1 {
+  width: 100%;
+  position: relative;
+  padding-top: 10%;
+}
 
+.app1 {
+  /*border: 1px dashed #000;*/
+  display: inline;
+  height: 200px;
+  margin-left: 3%;
+  margin-right: 3%;
+  position: absolute;
+}
+
+.box {
+  /*border: 1px dashed red;*/
+}
+
+.left {
+  /*border: 1px dashed blue;*/
+  width: 200px;
+  height: 100px;
+  background-color: rgb(0, 227, 187);
+}
+
+.blockLeft {
+  float: left;
+}
+
+.blockRight {
+  float: right;
+  /*width: 100%;*/
+  /*padding-right: 51%;*/
+
+}
+
+.right {
+  /*border: 1px dashed green;*/
+  width: 720px;
+  height: 100px;
+  background-color: rgb(229, 229, 229);
+}
 
 /* clear fix -
     prevent parent element from collapsing to zero height since it
