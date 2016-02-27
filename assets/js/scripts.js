@@ -1,32 +1,53 @@
 $(function () {
   'use strict';
 
-  var queryString = window.location.search;
-  console.log("queryString = " + queryString);
+  // save appointment when button is clicked
+  $(".createFootButton").on("click", function(){
+
+    var myAppt = new Appointment("appt" + parseInt(localStorage.length + 1, 10));
+
+    myAppt.title = $("#title").val();
+    myAppt.appointmentDate = new Date();
+    myAppt.street = $("#inputStreet").val();
+    myAppt.city = $("#inputCityState").val();
+    myAppt.state = $("#inputCityState").val();
+    myAppt.temperature = "55"
+    myAppt.desciption = "mostly clouds"
+    myAppt.weatherType = "Clouds"
+    console.log(myAppt);
+
+    window.localStorage.setItem(myAppt.id, JSON.stringify(myAppt));
+    console.log("** localStorage.setItem **");
+
+    $("#createForm").submit();
+  });
+
+  // var queryString = window.location.search;
+  // console.log("queryString = " + queryString);
+  //
+  // var parameters = parseQueryString(queryString);
+  // console.log(parameters);
+  //
+  // function parseQueryString( queryString ) {
+  //   var params = {} ;
+  //   var queries = [];
+  //   var temp = [];
+  //   // remove "?" character
+  //   queryString = queryString.substring(1);
+  //   // Split into key/value pairs
+  //   queries = queryString.split("&");
+  //   // Convert the array of strings into an object
+  //   $.each(queries, function(i) {
+  //       temp = queries[i].split('=');
+  //       params[temp[0]] = temp[1];  // tricky syntax params[] is the key
+  //     });
+  //   return params;
+  // };
 
 
-  var parameters = parseQueryString(queryString);
-  console.log(parameters);
-
-  function parseQueryString( queryString ) {
-    var params = {} ;
-    var queries = [];
-    var temp = [];
-    // remove "?" character
-    queryString = queryString.substring(1);
-    // Split into key/value pairs
-    queries = queryString.split("&");
-    // Convert the array of strings into an object
-    $.each(queries, function(i) {
-        temp = queries[i].split('=');
-        params[temp[0]] = temp[1];  // tricky syntax params[] is the key
-      });
-    return params;
-  };
-
-
-  function Appointment(title) {
-    this.title = title;
+  function Appointment(id) {
+    this.id = id;
+    this.title = "";
     this.createDate = new Date();
     this.appointmentDate = null;
     // location data
@@ -51,21 +72,22 @@ $(function () {
     // };
 }
 
-var myAppt = new Appointment("app1");
-myAppt.appointmentDate = new Date();
-myAppt.street = "1212 Boogie Boogie Ave.";
-myAppt.city = "Norfolk";
-myAppt.state = "VA";
-myAppt.temperature = 55;
-myAppt.desciption = "Cold as ****!";
-myAppt.weatherType = "rainy";
-console.log(myAppt);
+// var myAppt = new Appointment("app1");
+// myAppt.appointmentDate = new Date();
+// myAppt.street = "1212 Boogie Boogie Ave.";
+// myAppt.city = "Norfolk";
+// myAppt.state = "VA";
+// myAppt.temperature = 55;
+// myAppt.desciption = "Cold as ****!";
+// myAppt.weatherType = "rainy";
+// console.log(myAppt);
 
-window.localStorage.setItem(myAppt.title, JSON.stringify(myAppt));
-console.log("** localStorage.setItem **");
+// write to locaStorage
+// window.localStorage.setItem(myAppt.title, JSON.stringify(myAppt));
+// console.log("** localStorage.setItem **");
 
-// var myOtherAppt = new Appointment();
-var myOtherAppt = JSON.parse(localStorage.getItem(myAppt.title));
+// read from localStorage
+var myOtherAppt = JSON.parse(localStorage.getItem("appt01"));
 console.log("** localStorage.getItem **");
 console.log(myOtherAppt);
 
@@ -78,37 +100,37 @@ var apiString = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
                 "&APPID=82f61d5df7730f4b96d58ed8e8aa6b63";
 
 // $.getJSON(("apis/github/users/octocat.json"), function (value) {
-$.getJSON((apiString), function (value) {
-
-  console.log(apiString);
-  console.log(value);
-
-  var myUserTemp = _.template("<%- m.name %> "
-                            + "<%- m.date %> "
-                            + "<%- m.count %> "
-                            + "<%- m.maxTemp %> "
-                            + "<%- m.weatherType %> "
-                            + "<%- m.description %> "
-                            + "<%- m.iconCode %> ", {variable: "m"});
-
-  console.log(myUserTemp({ name: value.city.name }));
-  console.log(myUserTemp({ name: value.cnt }));
-  console.log(myUserTemp({ name: value.list[0].dt }));
-  console.log(myUserTemp({ name: value.list[0].temp.max }));
-  console.log(myUserTemp({ name: value.list[0].weather[0].main }));
-  console.log(myUserTemp({ name: value.list[0].weather[0].description }));
-  console.log(myUserTemp({ name: value.list[0].weather[0].icon }));
-
-//   $("#profileImage").attr("src", myUserTemp({ name: value.avatar_url}));
-//   $("#fullName").html(myUserTemp({ name: value.name}));
-//   $("#loginId").html(myUserTemp({ name: value.login}));
-//   $("#company").html(myUserTemp({ name: value.company}));
-//   $("#userLocation").html(myUserTemp({ name: value.location}));
-//   $("#emailAddress").html(myUserTemp({ name: value.email}));
-//   $("#userURL").html(myUserTemp({ name: value.blog}));
-//   $("#startDate").html(formatDate( myUserTemp({ name: value.created_at})));
-//   $("#following").html(myUserTemp({ name: value.following}));
-//   $("#followers").html(formatNumber( myUserTemp({ name: value.followers})));
-});   // end JSON
+// $.getJSON((apiString), function (value) {
+//
+//   console.log(apiString);
+//   console.log(value);
+//
+//   var myUserTemp = _.template("<%- m.name %> "
+//                             + "<%- m.date %> "
+//                             + "<%- m.count %> "
+//                             + "<%- m.maxTemp %> "
+//                             + "<%- m.weatherType %> "
+//                             + "<%- m.description %> "
+//                             + "<%- m.iconCode %> ", {variable: "m"});
+//
+//   console.log(myUserTemp({ name: value.city.name }));
+//   console.log(myUserTemp({ name: value.cnt }));
+//   console.log(myUserTemp({ name: value.list[0].dt }));
+//   console.log(myUserTemp({ name: value.list[0].temp.max }));
+//   console.log(myUserTemp({ name: value.list[0].weather[0].main }));
+//   console.log(myUserTemp({ name: value.list[0].weather[0].description }));
+//   console.log(myUserTemp({ name: value.list[0].weather[0].icon }));
+//
+// //   $("#profileImage").attr("src", myUserTemp({ name: value.avatar_url}));
+// //   $("#fullName").html(myUserTemp({ name: value.name}));
+// //   $("#loginId").html(myUserTemp({ name: value.login}));
+// //   $("#company").html(myUserTemp({ name: value.company}));
+// //   $("#userLocation").html(myUserTemp({ name: value.location}));
+// //   $("#emailAddress").html(myUserTemp({ name: value.email}));
+// //   $("#userURL").html(myUserTemp({ name: value.blog}));
+// //   $("#startDate").html(formatDate( myUserTemp({ name: value.created_at})));
+// //   $("#following").html(myUserTemp({ name: value.following}));
+// //   $("#followers").html(formatNumber( myUserTemp({ name: value.followers})));
+// });   // end JSON
 
 });  // End of file.
