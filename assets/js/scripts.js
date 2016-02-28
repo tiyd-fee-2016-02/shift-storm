@@ -6,17 +6,17 @@ $(function () {
 
     var myAppt = new Appointment("appt" + parseInt(localStorage.length + 1, 10));
 
-    myAppt.title = $("#title").val();
-    myAppt.appointmentDate = new Date();
+    myAppt.apptTitle = $("#inputTitle").val();
+    myAppt.appointmentDate = $("#inputDate").val();
     myAppt.street = $("#inputStreet").val();
     myAppt.city = $("#inputCityState").val();
     myAppt.state = $("#inputCityState").val();
     myAppt.temperature = "55"
     myAppt.desciption = "mostly clouds"
-    myAppt.weatherType = "Clouds"
+    myAppt.weatherType = "10b"
     console.log(myAppt);
 
-    window.localStorage.setItem(myAppt.id, JSON.stringify(myAppt));
+    window.localStorage.setItem(myAppt.apptId, JSON.stringify(myAppt));
     console.log("** localStorage.setItem **");
 
     $("#createForm").submit();
@@ -46,8 +46,8 @@ $(function () {
 
 
   function Appointment(id) {
-    this.id = id;
-    this.title = "";
+    this.apptId = id;
+    this.apptTitle = "";
     this.createDate = new Date();
     this.appointmentDate = null;
     // location data
@@ -60,7 +60,7 @@ $(function () {
     this.weatherType = "";  // cloudy, rainy, sunny
     // methods
     // this.getInfo = function() {
-    //     return "title = " + this.title + " \n" +
+    //     return "title = " + this.aaptTitle + " \n" +
     //            "create date = " + this.createDate + " \n" +
     //            "appointment date = " + this.appointmentDate + "\n" +
     //            "street = " + this.street + "\n" +
@@ -83,7 +83,7 @@ $(function () {
 // console.log(myAppt);
 
 // write to locaStorage
-// window.localStorage.setItem(myAppt.title, JSON.stringify(myAppt));
+// window.localStorage.setItem(myAppt.apptTitle, JSON.stringify(myAppt));
 // console.log("** localStorage.setItem **");
 
 // read from localStorage
