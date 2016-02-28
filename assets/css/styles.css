@@ -1,3 +1,7 @@
+* {
+  color: rgb(185, 185, 185);
+}
+
 body {
   height: 100%;
   font-family: 'Lato', sans-serif;
@@ -170,7 +174,14 @@ i.fa-cloud {
   font-size: 50px;
 }
 
-.container1 {
+.container {
+    width: 100%;
+    position: relative;
+    margin-top: 10%;
+    min-height: 200px;
+}
+
+/*.container1 {
   width: 100%;
   position: relative;
   margin-top: 15%;
@@ -189,12 +200,13 @@ i.fa-cloud {
   position: relative;
   margin-top: 5%;
   min-height: 200px;
-}
+}*/
 
 .dateWrap {
   margin-top: 4%;
   display: inline-block;
   height: 200px;
+  width: 100%;
   color: rgb(185, 185, 185);
 }
 
