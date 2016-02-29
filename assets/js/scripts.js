@@ -133,4 +133,16 @@ var apiString = "http://api.openweathermap.org/data/2.5/forecast/daily?" +
 // //   $("#followers").html(formatNumber( myUserTemp({ name: value.followers})));
 // });   // end JSON
 
+// modal?
+$("#lefty").on('click', function(){
+  $(".emptyA").show(280);
+});
+$("#no").on('click', function(){
+  $(".emptyA").hide();
+});
+$("#yes").on('click', function(){
+  
+});
+
+
 });  // End of file.
