@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/styles.css">
+    <link type="text/css" rel="stylesheet" href="./assets/octicons/octicons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicons/favicon.ico" />
+    <title>Create Appointments</title>
+  </head>
+  <body>
+   <form action="index.html" method="get" id="createForm">
+    <div class="main-wrapper"> <!-- content wrapper -->
+      <header class="header-content"><!-- header content -->
+        <h1 class="appHead">
+          <a href="./index.html" class="create-header-link">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+          New Appointment</h1>
+      </header>
+      <div class="main-content" id="mainApp"> <!--content container -->
+          <!-- page content -->
+          <div class="main-content"> <!--content container -->
+              <!-- page content -->
+              <div class="appContainer1">
+                <div class="appTitle">Title</div>
+                <input name="title" class="appU txt" id="inputTitle">
+              </div>
+              <div class="appContainer2">
+                <div class="appTitle">Street</div>
+                <input name="street" class="appU txt" id="inputStreet">
+                <br><br><br>
+                <div class="appTitle">City, State<i class="fa fa-map-marker"></i></div>
+                <input name="citystate" class="appU txt" id="inputCityState">
+              </div>
+              <div class="appContainer3">
+                <div class="appTitle">Date<i class="fa fa-calendar"></i></div>
+                <input name="date" class="appU txt" id="inputDate">
+              </div>
+              <div class= "appContainer4">
+                <div class="appTitle">Time<i class="fa fa-clock-o"></i></div>
+                <input name="time" class="appU txt" id="inputTime">
+              </div>
+              <div class= "emptyA">
+              </div>
+          </div>
+      </div>
+      </div> <!-- main wrapper -->
+      <footer>
+       <div class="createFootButton">
+         Save Appointment
+       </div>
+     </form>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
