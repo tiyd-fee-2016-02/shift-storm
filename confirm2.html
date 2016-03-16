@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/styles.css">
+    <link type="text/css" rel="stylesheet" href="./assets/octicons/octicons.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicons/favicon.ico" />
+    <title>Confirmation</title>
+  </head>
+  <body>
+    <div class="main-wrapper"> <!-- content wrapper -->
+      <header class="header-content"> <!-- header content -->
+        <h1 class = appHead>
+          <a href="./index.html">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+          Meet w/ T-Swift
+        </h1>
+      </header>
+          <div class="main-content"> <!--content container -->
+              <!-- page content -->
+            <div class = "what">
+              <div class= "when">Today at<span id= "timeColor"> 6:00pm</span></div>
+              <div class= "here"><div class= "where">Pinhook Durham</div><i class="fa fa-map-marker" id="hereGreen"></i></div>
+              </div>
+              <div class= "look"><IMG SRC="./assets/images/pinhook.png" id="pinhook">
+              <div class= "update"><div id="niceDay"><i class="fa fa-cloud" id="upCloud"></i> Fluffy, 67 &#8457;</div></div>
+            </div>
+    </div> <!-- main wrapper -->
+    <footer>
+      <!-- <a href="./edit.html?apptId=appt1"> -->
+        <div class="footButton4">
+          Edit Appointment
+        </div>
+      <!-- </a> -->
+      <form action="./edit.html?apptId=appt1" method="get" id="confirmForm" name="confirm-form">
+      </form>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
