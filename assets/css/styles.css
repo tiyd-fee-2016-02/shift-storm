@@ -149,11 +149,11 @@ margin-right: 3%;
   border-radius: 1px;
 }
 
-.txt {
+#txt {
   margin-top: 3%;
   width: 95%;
   height: 105px;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   border-color: rgb(224, 224, 224);
 }

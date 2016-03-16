@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script> -->
     <link type="text/css" rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/styles.css">
@@ -9,67 +9,83 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicons/favicon.ico" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
     <title>Appointments</title>
   </head>
-  <body>
+  <body ng-app="apptApp">
     <div class="main-wrapper"> <!-- content wrapper -->
       <header class="header-content">
         <!-- header content -->
-        <h1>Appointments<i class="fa fa-plus"></i></h1>
+        <h1>Appointments <a href="/create"><i class="fa fa-plus"></a></i></h1>
       </header>
+
       <div class="main-content"> <!--content container -->
           <!-- page content -->
           <div class= "search-container">
-          <input name="text" id="txt">
+          <input type="text" ng-model="yourName" placeholder="John Doe" id="txt">
           <i class="fa fa-search"></i>
+          <br>
+          <span style="font-size:50px">{{yourName}}</span>
+          <!-- <span style="font-size:50px">{{MainController.message}}</span> -->
+          <hr>
           </div>
-      </div>
-          <!-- first appointment box -->
-      <div class = "container1">
-        <ul class ="app1">
-          <div class ="blockLeft">
-          <li class ="box left" id="a1">5 pm</li>
-          <li class ="box left" id="a2"><i class="fa fa-cloud"></i></li>
-          </div>
-          <div class ="blockRight">
-          <li class ="box right" id="a3">Ash</li>
-          <li class ="box right" id="a4">Durham</li>
-          </div>
-        </ul>
       </div>
 
-      <div class = "container2">
-        <ul class ="app1">
-          <div class ="blockLeft">
-          <li class ="box left" id="a1">5 pm</li>
-          <li class ="box left" id="a2"><i class="fa fa-cloud"></i></li>
-          </div>
-          <div class ="blockRight">
-          <li class ="box right" id="a3">Ash</li>
-          <li class ="box right" id="a4">Durham</li>
-          </div>
-        </ul>
-      </div>
+<!-- BEGIN angular injection -->
 
-      <div class = "dateWrap">
-          <div class = "dateLine">
-          </div>
-          <div class = "dateDay">Fri, Feb 26th</div>
-      </div>
 
-      <div class = "container3">
-        <ul class ="app1">
-          <div class ="blockLeft">
-          <li class ="box left" id="a1">5 pm</li>
-          <li class ="box left" id="a2"><i class="fa fa-cloud"></i></li>
-          </div>
-          <div class ="blockRight">
-          <li class ="box right" id="a3">Ash</li>
-          <li class ="box right" id="a4">Durham</li>
-          </div>
-        </ul>
-      </div>
+    <!-- first appointment box -->
+    <div class = "container1">
+      <a href="/confirm">
+      <ul class ="app1">
+        <div class ="blockLeft">
+        <li class ="box left" id="a1">5 pm</li>
+        <li class ="box left" id="a2"><i class="fa fa-cloud"></i></li>
+        </div>
+        <div class ="blockRight">
+        <li class ="box right" id="a3">Ash</li>
+        <li class ="box right" id="a4">Durham</li>
+        </div>
+      </ul>
+    </a>
+    </div>
+    <div class = "container2">
+      <a href="/confirm">
+      <ul class ="app1">
+        <div class ="blockLeft">
+        <li class ="box left" id="a1">5 pm</li>
+        <li class ="box left" id="a2"><i class="fa fa-cloud"></i></li>
+        </div>
+        <div class ="blockRight">
+        <li class ="box right" id="a3">Ash</li>
+        <li class ="box right" id="a4">Durham</li>
+        </div>
+      </ul>
+      </a>
+    </div>
+    <div class = "dateWrap">
+        <div class = "dateLine">
+        </div>
+        <div class = "dateDay">Fri, Feb 26th</div>
+    </div>
+    <div class = "container3">
+      <a href="/confirm">
+      <ul class ="app1">
+        <div class ="blockLeft">
+        <li class ="box left" id="a1">5 pm</li>
+        <li class ="box left" id="a2"><i class="fa fa-cloud"></i></li>
+        </div>
+        <div class ="blockRight">
+        <li class ="box right" id="a3">Ash</li>
+        <li class ="box right" id="a4">Durham</li>
+        </div>
+      </ul>
+      </a>
+    </div>
 
+
+<!-- END angular injection -->
 
     </div> <!-- main wrapper -->
 
@@ -80,6 +96,10 @@
     </footer>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./assets/js/app.js"></script>
     <script src="./assets/js/scripts.js"></script>
+    <script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
   </body>
 </html>
