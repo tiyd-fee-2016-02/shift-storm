@@ -12,7 +12,7 @@ $(function () {
     myAppt.city = $("#inputCityState").val();
     myAppt.state = $("#inputCityState").val();
     myAppt.temperature = "55"
-    myAppt.desciption = "mostly clouds"
+    myAppt.desciption = "mostly cloudy"
     myAppt.weatherType = "10b"
     console.log(myAppt);
 
